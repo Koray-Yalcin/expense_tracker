@@ -46,7 +46,7 @@ function Records() {
 
       const dispatch = useDispatch();
       useEffect(() => {
-        //dispatch(getRecords());
+        dispatch(getRecords());
       }, [])
   return (
     <Table loading={loading} columns={columns} dataSource={data}></Table>

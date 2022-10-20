@@ -69,7 +69,7 @@ function Categories() {
     const dispatch = useDispatch(); 
 
      useEffect(() => {
-        //dispatch(getCategories());
+        dispatch(getCategories());
       }, [])
       
       const emptyForm: CategoryForm = {
@@ -91,14 +91,14 @@ function Categories() {
       };
 
       const handleOk = () => {
-        //dispatch(addCategory(form))
-        // if(mode === 'new') dispatch(addCategory(form);)
-        // else if (mode === 'edit') dispatch(updateCategory(form);)
+        dispatch(addCategory(form))
+         if(mode === 'new') dispatch(addCategory(form);)
+         else if (mode === 'edit') dispatch(updateCategory(form);)
         setIsModalOpen(false);
         setMode('new');
         setForm(emptyForm);
         if (mode === 'delete' && typeof deleteId === 'number') {
-          //dispatch(deleteCategory(deleteId));
+          dispatch(deleteCategory(deleteId));
         }
       };
     

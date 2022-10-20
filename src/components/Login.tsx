@@ -16,7 +16,7 @@ function Login() {
  const {data, loading, error} = useSelector((state: AppState) => state.user);
 
  const onFinish = (values: LoginForm) => {
-  //dispatch(login(values));
+  dispatch(login(values));
 };
 
     useEffect(() => {
